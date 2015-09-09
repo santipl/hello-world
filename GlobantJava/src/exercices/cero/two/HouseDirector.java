@@ -8,7 +8,7 @@ public class HouseDirector {
 		this.houseBuilder = houseBuilder;
 	}
 	
-	public void construceHouse(){
+	public void constructHouse(){
 		houseBuilder.buildMaterial();
 		houseBuilder.buildColor();
 		houseBuilder.buildFloors();
