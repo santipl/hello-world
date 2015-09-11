@@ -1,10 +1,21 @@
 package exercices.cero.two;
 
-public interface HouseBuilder {
+public abstract class HouseBuilder {
 	
-	public void buildMaterial();
-	public void buildColor();
-	public void buildFloors();
-	public House getHouse();
+	protected House house;
+	
+	public House getHouse(){
+		return house;
+	}
+	
+	public void createNewHouse() {
+		house = new House();
+	}
+
+	public abstract void buildMaterial();
+
+	public abstract void buildColor();
+
+	public abstract void buildFloor();
 
 }

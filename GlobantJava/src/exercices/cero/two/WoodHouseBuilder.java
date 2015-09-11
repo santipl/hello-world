@@ -1,38 +1,25 @@
 package exercices.cero.two;
 
-public class WoodHouseBuilder implements HouseBuilder {
-	
-	private House house;
-
-	public WoodHouseBuilder() {
-		house = new House();
-	}
+public class WoodHouseBuilder extends HouseBuilder {
 
 	@Override
 	public void buildMaterial() {
-		house.setMaterial("wood");		
+		house.setMaterial("wood");
 	}
 
 	@Override
 	public void buildColor() {
-		house.setColor("natural");
-		
+		house.setColor("natural");		
 	}
 
 	@Override
-	public void buildFloors() {
-		house.setFloors("1");
-		
+	public void buildFloor() {
+		house.setFloors("1");		
 	}
 
 	@Override
-	public House getHouse() {
-		return house;
+	public String toString() {
+		return "Wood House style " + house;
 	}
 	
-	
-
-	
-	
-
 }

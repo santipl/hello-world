@@ -1,35 +1,24 @@
 package exercices.cero.two;
 
-public class SolidHouseBuilder implements HouseBuilder {
-	
-	private House house;
-
-	public SolidHouseBuilder() {
-		house = new House();
-	}
+public class SolidHouseBuilder extends HouseBuilder {
 
 	@Override
 	public void buildMaterial() {
-		house.setMaterial("concrete");		
+		house.setMaterial("concrete");
 	}
 
 	@Override
 	public void buildColor() {
-		house.setColor("white");
-		
+		house.setColor("white");		
 	}
 
 	@Override
-	public void buildFloors() {
-		house.setFloors("2");
-		
+	public void buildFloor() {
+		house.setFloors("2");		
 	}
 
 	@Override
-	public House getHouse() {
-		return house;
+	public String toString() {
+		return "Solid House style " + house;
 	}
-	
-	
-
 }

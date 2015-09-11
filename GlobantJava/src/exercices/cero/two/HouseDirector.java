@@ -2,20 +2,20 @@ package exercices.cero.two;
 
 public class HouseDirector {
 	
-	private HouseBuilder houseBuilder = null;
+	private HouseBuilder houseBuilder;
 	
-	public HouseDirector(HouseBuilder houseBuilder){
-		this.houseBuilder = houseBuilder;
+	public void setHouseBuilder(HouseBuilder hb) {
+		houseBuilder = hb;
 	}
-	
-	public void constructHouse(){
-		houseBuilder.buildMaterial();
-		houseBuilder.buildColor();
-		houseBuilder.buildFloors();
-	}
-	
-	public House getHouse(){
+
+	public House getHouse() {
 		return houseBuilder.getHouse();
 	}
 
+	public void constructHouse() {
+		houseBuilder.createNewHouse();
+		houseBuilder.buildMaterial();
+		houseBuilder.buildColor();
+		houseBuilder.buildFloor();
+	}
 }

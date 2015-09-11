@@ -6,27 +6,29 @@ public class House {
 	private String color;
 	private String floors;
 	
-	public synchronized String getMaterial() {
+	public String getMaterial() {
 		return material;
 	}
-	public synchronized void setMaterial(String material) {
-		this.material = material;
-	}
-	public synchronized String getColor() {
+	public String getColor() {
 		return color;
 	}
-	public synchronized void setColor(String color) {
-		this.color = color;
-	}
-	public synchronized String getFloors() {
+	public String getFloors() {
 		return floors;
 	}
-	public synchronized void setFloors(String floors) {
+	public void setMaterial(String material) {
+		this.material = material;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public void setFloors(String floors) {
 		this.floors = floors;
 	}
+	
 	@Override
 	public String toString() {
-		return "House [material= " + material + ", color= " + color + ", floors= " + floors + "]";
+		return ("[material= " + material + ", color= " + color + ", floors= " + floors + "]");
 	}
+	
 
 }
